@@ -562,14 +562,9 @@ class _RenderInkFeatures extends RenderProxyBox implements MaterialInkController
 
   @visibleForTesting
   List<InkFeature>? get debugInkFeatures {
-<<<<<<< HEAD
-    if (kDebugMode)
-      return _inkFeatures;
-=======
     if (kDebugMode) {
       return _inkFeatures;
     }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     return null;
   }
   List<InkFeature>? _inkFeatures;
@@ -772,12 +767,7 @@ class _MaterialInterior extends ImplicitlyAnimatedWidget {
        assert(shape != null),
        assert(clipBehavior != null),
        assert(elevation != null && elevation >= 0.0),
-<<<<<<< HEAD
-       assert(color != null),
-       super(key: key, curve: curve, duration: duration);
-=======
        assert(color != null);
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
   /// The widget below this widget in the tree.
   ///

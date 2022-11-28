@@ -1157,8 +1157,6 @@ void main() {
     expect(getMaterial().elevation, 10);
   });
 
-<<<<<<< HEAD
-=======
   testWidgets('scrolledUnderElevation with nested scroll view', (WidgetTester tester) async {
     Widget buildAppBar({double? scrolledUnderElevation}) {
       return MaterialApp(
@@ -1206,7 +1204,6 @@ void main() {
     expect(getMaterial().elevation, 10);
   });
 
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
   group('SliverAppBar elevation', () {
     Widget buildSliverAppBar(bool forceElevated, {double? elevation, double? themeElevation}) {
       return MaterialApp(

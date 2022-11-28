@@ -154,27 +154,6 @@ class FakeProcess implements io.Process {
       _completer = completer
   {
     if (_stderr.isEmpty) {
-<<<<<<< HEAD
-      stderr = const Stream<List<int>>.empty();
-    } else if (outputFollowsExit) {
-      // Wait for the process to exit before emitting stderr.
-      stderr = Stream<List<int>>.fromFuture(exitCode.then((_) {
-        return Future<List<int>>(() => _stderr);
-      }));
-    } else {
-      stderr = Stream<List<int>>.value(_stderr);
-    }
-
-    if (_stdout.isEmpty) {
-      stdout = const Stream<List<int>>.empty();
-    } else if (outputFollowsExit) {
-      // Wait for the process to exit before emitting stdout.
-      stdout = Stream<List<int>>.fromFuture(exitCode.then((_) {
-        return Future<List<int>>(() => _stdout);
-      }));
-    } else {
-      stdout = Stream<List<int>>.value(_stdout);
-=======
       this.stderr = const Stream<List<int>>.empty();
     } else if (outputFollowsExit) {
       // Wait for the process to exit before emitting stderr.
@@ -198,7 +177,6 @@ class FakeProcess implements io.Process {
       }));
     } else {
       this.stdout = Stream<List<int>>.value(_stdout);
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     }
   }
 
@@ -214,10 +192,7 @@ class FakeProcess implements io.Process {
   @override
   final int pid;
 
-<<<<<<< HEAD
-=======
   /// The raw byte content of stderr.
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
   final List<int> _stderr;
 
   @override
@@ -229,10 +204,7 @@ class FakeProcess implements io.Process {
   @override
   late final Stream<List<int>> stdout;
 
-<<<<<<< HEAD
-=======
   /// The raw byte content of stdout.
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
   final List<int> _stdout;
 
   @override
@@ -315,17 +287,6 @@ abstract class FakeProcessManager implements ProcessManager {
     if (fakeCommand.onRun != null) {
       fakeCommand.onRun!();
     }
-<<<<<<< HEAD
-    return _FakeProcess(
-      fakeCommand.exitCode,
-      fakeCommand.duration,
-      _pid,
-      encoding?.encode(fakeCommand.stderr) ?? fakeCommand.stderr.codeUnits,
-      fakeCommand.stdin,
-      encoding?.encode(fakeCommand.stdout) ?? fakeCommand.stdout.codeUnits,
-      fakeCommand.completer,
-      fakeCommand.outputFollowsExit,
-=======
     return FakeProcess(
       duration: fakeCommand.duration,
       exitCode: fakeCommand.exitCode,
@@ -335,7 +296,6 @@ abstract class FakeProcessManager implements ProcessManager {
       stdout: encoding?.encode(fakeCommand.stdout) ?? fakeCommand.stdout.codeUnits,
       completer: fakeCommand.completer,
       outputFollowsExit: fakeCommand.outputFollowsExit,
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     );
   }
 

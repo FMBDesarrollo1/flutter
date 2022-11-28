@@ -306,20 +306,12 @@ class OutlinedButton extends ButtonStyleButton {
     final ColorScheme colorScheme = theme.colorScheme;
 
     return Theme.of(context).useMaterial3
-<<<<<<< HEAD
-      ? _TokenDefaultsM3(context)
-      : styleFrom(
-          primary: colorScheme.primary,
-          onSurface: colorScheme.onSurface,
-          backgroundColor: Colors.transparent,
-=======
       ? _OutlinedButtonDefaultsM3(context)
       : styleFrom(
           foregroundColor: colorScheme.primary,
           disabledForegroundColor: colorScheme.onSurface.withOpacity(0.38),
           backgroundColor: Colors.transparent,
           disabledBackgroundColor: Colors.transparent,
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
           shadowColor: theme.shadowColor,
           elevation: 0,
           textStyle: theme.textTheme.button,
@@ -355,13 +347,6 @@ EdgeInsetsGeometry _scaledPadding(BuildContext context) {
     MediaQuery.maybeOf(context)?.textScaleFactor ?? 1,
   );
 }
-<<<<<<< HEAD
-
-@immutable
-class _OutlinedButtonDefaultForeground extends MaterialStateProperty<Color?>  with Diagnosticable {
-  _OutlinedButtonDefaultForeground(this.primary, this.onSurface);
-=======
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
 @immutable
 class _OutlinedButtonDefaultColor extends MaterialStateProperty<Color?>  with Diagnosticable {
@@ -453,17 +438,6 @@ class _OutlinedButtonWithIconChild extends StatelessWidget {
   }
 }
 
-<<<<<<< HEAD
-// BEGIN GENERATED TOKEN PROPERTIES
-
-// Generated code to the end of this file. Do not edit by hand.
-// These defaults are generated from the Material Design Token
-// database by the script dev/tools/gen_defaults/bin/gen_defaults.dart.
-
-// Generated version v0_92
-class _TokenDefaultsM3 extends ButtonStyle {
-  _TokenDefaultsM3(this.context)
-=======
 // BEGIN GENERATED TOKEN PROPERTIES - OutlinedButton
 
 // Do not edit by hand. The code between the "BEGIN GENERATED" and
@@ -475,7 +449,6 @@ class _TokenDefaultsM3 extends ButtonStyle {
 
 class _OutlinedButtonDefaultsM3 extends ButtonStyle {
   _OutlinedButtonDefaultsM3(this.context)
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
    : super(
        animationDuration: kThemeChangeDuration,
        enableFeedback: true,
@@ -487,11 +460,7 @@ class _OutlinedButtonDefaultsM3 extends ButtonStyle {
 
   @override
   MaterialStateProperty<TextStyle?> get textStyle =>
-<<<<<<< HEAD
-    MaterialStateProperty.all<TextStyle?>(Theme.of(context).textTheme.labelLarge);
-=======
     MaterialStatePropertyAll<TextStyle?>(Theme.of(context).textTheme.labelLarge);
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
   @override
   MaterialStateProperty<Color?>? get backgroundColor =>
@@ -500,28 +469,15 @@ class _OutlinedButtonDefaultsM3 extends ButtonStyle {
   @override
   MaterialStateProperty<Color?>? get foregroundColor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return _colors.onSurface.withOpacity(0.38);
-=======
       if (states.contains(MaterialState.disabled)) {
         return _colors.onSurface.withOpacity(0.38);
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return _colors.primary;
     });
 
   @override
   MaterialStateProperty<Color?>? get overlayColor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.hovered))
-        return _colors.primary.withOpacity(0.08);
-      if (states.contains(MaterialState.focused))
-        return _colors.primary.withOpacity(0.12);
-      if (states.contains(MaterialState.pressed))
-        return _colors.primary.withOpacity(0.12);
-=======
       if (states.contains(MaterialState.hovered)) {
         return _colors.primary.withOpacity(0.08);
       }
@@ -531,7 +487,6 @@ class _OutlinedButtonDefaultsM3 extends ButtonStyle {
       if (states.contains(MaterialState.pressed)) {
         return _colors.primary.withOpacity(0.12);
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return null;
     });
 
@@ -560,14 +515,9 @@ class _OutlinedButtonDefaultsM3 extends ButtonStyle {
   @override
   MaterialStateProperty<BorderSide>? get side =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-    if (states.contains(MaterialState.disabled))
-      return BorderSide(color: _colors.onSurface.withOpacity(0.12));
-=======
     if (states.contains(MaterialState.disabled)) {
       return BorderSide(color: _colors.onSurface.withOpacity(0.12));
     }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     return BorderSide(color: _colors.outline);
   });
 
@@ -578,14 +528,9 @@ class _OutlinedButtonDefaultsM3 extends ButtonStyle {
   @override
   MaterialStateProperty<MouseCursor?>? get mouseCursor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return SystemMouseCursors.basic;
-=======
       if (states.contains(MaterialState.disabled)) {
         return SystemMouseCursors.basic;
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return SystemMouseCursors.click;
     });
 
@@ -599,8 +544,4 @@ class _OutlinedButtonDefaultsM3 extends ButtonStyle {
   InteractiveInkFeatureFactory? get splashFactory => Theme.of(context).splashFactory;
 }
 
-<<<<<<< HEAD
-// END GENERATED TOKEN PROPERTIES
-=======
 // END GENERATED TOKEN PROPERTIES - OutlinedButton
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318

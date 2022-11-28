@@ -5,16 +5,9 @@
 import 'template.dart';
 
 class ButtonTemplate extends TokenTemplate {
-<<<<<<< HEAD
-  const ButtonTemplate(this.tokenGroup, String fileName, Map<String, dynamic> tokens)
-    : super(fileName, tokens,
-        colorSchemePrefix: '_colors.',
-      );
-=======
   const ButtonTemplate(this.tokenGroup, super.blockName, super.fileName, super.tokens, {
     super.colorSchemePrefix = '_colors.',
   });
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
   final String tokenGroup;
 
@@ -23,14 +16,9 @@ class ButtonTemplate extends TokenTemplate {
       return '''
 
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return ${componentColor('$tokenGroup.disabled.container')};
-=======
       if (states.contains(MaterialState.disabled)) {
         return ${componentColor('$tokenGroup.disabled.container')};
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return ${componentColor('$tokenGroup.container')};
     })''';
     }
@@ -44,16 +32,6 @@ class ButtonTemplate extends TokenTemplate {
       return '''
 
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return ${elevation("$tokenGroup.disabled.container")};
-      if (states.contains(MaterialState.hovered))
-        return ${elevation("$tokenGroup.hover.container")};
-      if (states.contains(MaterialState.focused))
-        return ${elevation("$tokenGroup.focus.container")};
-      if (states.contains(MaterialState.pressed))
-        return ${elevation("$tokenGroup.pressed.container")};
-=======
       if (states.contains(MaterialState.disabled)) {
         return ${elevation("$tokenGroup.disabled.container")};
       }
@@ -66,7 +44,6 @@ class ButtonTemplate extends TokenTemplate {
       if (states.contains(MaterialState.pressed)) {
         return ${elevation("$tokenGroup.pressed.container")};
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return ${elevation("$tokenGroup.container")};
     })''';
     }
@@ -77,14 +54,8 @@ class ButtonTemplate extends TokenTemplate {
 
   @override
   String generate() => '''
-<<<<<<< HEAD
-// Generated version ${tokens["version"]}
-class _TokenDefaultsM3 extends ButtonStyle {
-  _TokenDefaultsM3(this.context)
-=======
 class _${blockName}DefaultsM3 extends ButtonStyle {
   _${blockName}DefaultsM3(this.context)
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
    : super(
        animationDuration: kThemeChangeDuration,
        enableFeedback: true,
@@ -96,11 +67,7 @@ class _${blockName}DefaultsM3 extends ButtonStyle {
 
   @override
   MaterialStateProperty<TextStyle?> get textStyle =>
-<<<<<<< HEAD
-    MaterialStateProperty.all<TextStyle?>(${textStyle("$tokenGroup.label-text")});
-=======
     MaterialStatePropertyAll<TextStyle?>(${textStyle("$tokenGroup.label-text")});
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
   @override
   MaterialStateProperty<Color?>? get backgroundColor =>${_backgroundColor()};
@@ -108,28 +75,15 @@ class _${blockName}DefaultsM3 extends ButtonStyle {
   @override
   MaterialStateProperty<Color?>? get foregroundColor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return ${componentColor('$tokenGroup.disabled.label-text')};
-=======
       if (states.contains(MaterialState.disabled)) {
         return ${componentColor('$tokenGroup.disabled.label-text')};
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return ${componentColor('$tokenGroup.label-text')};
     });
 
   @override
   MaterialStateProperty<Color?>? get overlayColor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.hovered))
-        return ${componentColor('$tokenGroup.hover.state-layer')};
-      if (states.contains(MaterialState.focused))
-        return ${componentColor('$tokenGroup.focus.state-layer')};
-      if (states.contains(MaterialState.pressed))
-        return ${componentColor('$tokenGroup.pressed.state-layer')};
-=======
       if (states.contains(MaterialState.hovered)) {
         return ${componentColor('$tokenGroup.hover.state-layer')};
       }
@@ -139,7 +93,6 @@ class _${blockName}DefaultsM3 extends ButtonStyle {
       if (states.contains(MaterialState.pressed)) {
         return ${componentColor('$tokenGroup.pressed.state-layer')};
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return null;
     });
 
@@ -176,14 +129,9 @@ ${tokens.containsKey("$tokenGroup.outline.color") ? '''
   @override
   MaterialStateProperty<BorderSide>? get side =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-    if (states.contains(MaterialState.disabled))
-      return ${border("$tokenGroup.disabled.outline")};
-=======
     if (states.contains(MaterialState.disabled)) {
       return ${border("$tokenGroup.disabled.outline")};
     }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     return ${border("$tokenGroup.outline")};
   });''' : '''
   // No default side'''}
@@ -195,14 +143,9 @@ ${tokens.containsKey("$tokenGroup.outline.color") ? '''
   @override
   MaterialStateProperty<MouseCursor?>? get mouseCursor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return SystemMouseCursors.basic;
-=======
       if (states.contains(MaterialState.disabled)) {
         return SystemMouseCursors.basic;
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return SystemMouseCursors.click;
     });
 

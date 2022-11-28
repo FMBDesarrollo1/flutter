@@ -970,8 +970,6 @@ void main() {
       expect(visualStudio.cmakeGenerator, equals('Visual Studio 16 2019'));
       expect(visualStudio.displayVersion, equals('\u{FFFD}'));
     });
-<<<<<<< HEAD
-=======
 
     testWithoutContext('Ignores malformed JSON in description property', () {
       setMockVswhereResponse(
@@ -992,7 +990,6 @@ void main() {
 
       expect(fixture.logger.warningText, isEmpty);
     });
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
   });
 
   group(VswhereDetails, () {

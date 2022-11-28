@@ -327,20 +327,12 @@ class TextButton extends ButtonStyleButton {
     final ColorScheme colorScheme = theme.colorScheme;
 
     return Theme.of(context).useMaterial3
-<<<<<<< HEAD
-      ? _TokenDefaultsM3(context)
-      : styleFrom(
-          primary: colorScheme.primary,
-          onSurface: colorScheme.onSurface,
-          backgroundColor: Colors.transparent,
-=======
       ? _TextButtonDefaultsM3(context)
       : styleFrom(
           foregroundColor: colorScheme.primary,
           disabledForegroundColor: colorScheme.onSurface.withOpacity(0.38),
           backgroundColor: Colors.transparent,
           disabledBackgroundColor: Colors.transparent,
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
           shadowColor: theme.shadowColor,
           elevation: 0,
           textStyle: theme.textTheme.button,
@@ -375,13 +367,6 @@ EdgeInsetsGeometry _scaledPadding(BuildContext context) {
     MediaQuery.maybeOf(context)?.textScaleFactor ?? 1,
   );
 }
-<<<<<<< HEAD
-
-@immutable
-class _TextButtonDefaultForeground extends MaterialStateProperty<Color?> {
-  _TextButtonDefaultForeground(this.primary, this.onSurface);
-=======
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
 @immutable
 class _TextButtonDefaultColor extends MaterialStateProperty<Color?> {
@@ -498,17 +483,6 @@ class _TextButtonWithIconChild extends StatelessWidget {
   }
 }
 
-<<<<<<< HEAD
-// BEGIN GENERATED TOKEN PROPERTIES
-
-// Generated code to the end of this file. Do not edit by hand.
-// These defaults are generated from the Material Design Token
-// database by the script dev/tools/gen_defaults/bin/gen_defaults.dart.
-
-// Generated version v0_92
-class _TokenDefaultsM3 extends ButtonStyle {
-  _TokenDefaultsM3(this.context)
-=======
 // BEGIN GENERATED TOKEN PROPERTIES - TextButton
 
 // Do not edit by hand. The code between the "BEGIN GENERATED" and
@@ -520,7 +494,6 @@ class _TokenDefaultsM3 extends ButtonStyle {
 
 class _TextButtonDefaultsM3 extends ButtonStyle {
   _TextButtonDefaultsM3(this.context)
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
    : super(
        animationDuration: kThemeChangeDuration,
        enableFeedback: true,
@@ -532,11 +505,7 @@ class _TextButtonDefaultsM3 extends ButtonStyle {
 
   @override
   MaterialStateProperty<TextStyle?> get textStyle =>
-<<<<<<< HEAD
-    MaterialStateProperty.all<TextStyle?>(Theme.of(context).textTheme.labelLarge);
-=======
     MaterialStatePropertyAll<TextStyle?>(Theme.of(context).textTheme.labelLarge);
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
   @override
   MaterialStateProperty<Color?>? get backgroundColor =>
@@ -545,28 +514,15 @@ class _TextButtonDefaultsM3 extends ButtonStyle {
   @override
   MaterialStateProperty<Color?>? get foregroundColor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return _colors.onSurface.withOpacity(0.38);
-=======
       if (states.contains(MaterialState.disabled)) {
         return _colors.onSurface.withOpacity(0.38);
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return _colors.primary;
     });
 
   @override
   MaterialStateProperty<Color?>? get overlayColor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.hovered))
-        return _colors.primary.withOpacity(0.08);
-      if (states.contains(MaterialState.focused))
-        return _colors.primary.withOpacity(0.12);
-      if (states.contains(MaterialState.pressed))
-        return _colors.primary.withOpacity(0.12);
-=======
       if (states.contains(MaterialState.hovered)) {
         return _colors.primary.withOpacity(0.08);
       }
@@ -576,7 +532,6 @@ class _TextButtonDefaultsM3 extends ButtonStyle {
       if (states.contains(MaterialState.pressed)) {
         return _colors.primary.withOpacity(0.12);
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return null;
     });
 
@@ -611,14 +566,9 @@ class _TextButtonDefaultsM3 extends ButtonStyle {
   @override
   MaterialStateProperty<MouseCursor?>? get mouseCursor =>
     MaterialStateProperty.resolveWith((Set<MaterialState> states) {
-<<<<<<< HEAD
-      if (states.contains(MaterialState.disabled))
-        return SystemMouseCursors.basic;
-=======
       if (states.contains(MaterialState.disabled)) {
         return SystemMouseCursors.basic;
       }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
       return SystemMouseCursors.click;
     });
 
@@ -632,8 +582,4 @@ class _TextButtonDefaultsM3 extends ButtonStyle {
   InteractiveInkFeatureFactory? get splashFactory => Theme.of(context).splashFactory;
 }
 
-<<<<<<< HEAD
-// END GENERATED TOKEN PROPERTIES
-=======
 // END GENERATED TOKEN PROPERTIES - TextButton
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318

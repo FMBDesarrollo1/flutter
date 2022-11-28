@@ -66,8 +66,9 @@ platform_properties:
           {"dependency": "open_jdk", "version": "11"}
         ]
       os: Mac-12
-      device_os: N
-  mac_ios:
+      cpu: x86
+      device_type: "msm8952"
+  mac_arm64_android:
     properties:
       dependencies: >-
         [
@@ -86,9 +87,10 @@ platform_properties:
           {"dependency": "apple_signing", "version": "none"}
         ]
       os: Mac-12
-      device_os: iOS-15.1
-      xcode: 13a233
-  windows:
+      cpu: x86
+      device_os: iOS-15
+      xcode: 13f17a
+  mac_arm64_ios:
     properties:
       dependencies: >-
         [

@@ -173,10 +173,7 @@ class AppBar extends StatefulWidget implements PreferredSizeWidget {
     this.bottom,
     this.elevation,
     this.scrolledUnderElevation,
-<<<<<<< HEAD
-=======
     this.notificationPredicate = defaultScrollNotificationPredicate,
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     this.shadowColor,
     this.surfaceTintColor,
     this.shape,
@@ -437,8 +434,6 @@ class AppBar extends StatefulWidget implements PreferredSizeWidget {
   ///    shadow.
   final double? scrolledUnderElevation;
 
-<<<<<<< HEAD
-=======
   /// A check that specifies which child's [ScrollNotification]s should be
   /// listened to.
   ///
@@ -446,7 +441,6 @@ class AppBar extends StatefulWidget implements PreferredSizeWidget {
   /// else for more complicated layouts.
   final ScrollNotificationPredicate notificationPredicate;
 
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
   /// {@template flutter.material.appbar.shadowColor}
   /// The color of the shadow below the app bar.
   ///
@@ -882,11 +876,7 @@ class _AppBarState extends State<AppBar> {
     assert(debugCheckHasMaterialLocalizations(context));
     final ThemeData theme = Theme.of(context);
     final AppBarTheme appBarTheme = AppBarTheme.of(context);
-<<<<<<< HEAD
-    final AppBarTheme defaults = theme.useMaterial3 ? _TokenDefaultsM3(context) : _DefaultsM2(context);
-=======
     final AppBarTheme defaults = theme.useMaterial3 ? _AppBarDefaultsM3(context) : _AppBarDefaultsM2(context);
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     final ScaffoldState? scaffold = Scaffold.maybeOf(context);
     final ModalRoute<dynamic>? parentRoute = ModalRoute.of(context);
 
@@ -1159,16 +1149,12 @@ class _AppBarState extends State<AppBar> {
       : widget.systemOverlayStyle
         ?? appBarTheme.systemOverlayStyle
         ?? defaults.systemOverlayStyle
-<<<<<<< HEAD
-        ?? _systemOverlayStyleForBrightness(ThemeData.estimateBrightnessForColor(backgroundColor));
-=======
         ?? _systemOverlayStyleForBrightness(
           ThemeData.estimateBrightnessForColor(backgroundColor),
           // Make the status bar transparent for M3 so the elevation overlay
           // color is picked up by the statusbar.
           theme.useMaterial3 ? const Color(0x00000000) : null,
         );
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
 
     return Semantics(
       container: true,
@@ -1323,11 +1309,7 @@ class _SliverAppBarDelegate extends SliverPersistentHeaderDelegate {
             )
           : flexibleSpace,
         bottom: bottom,
-<<<<<<< HEAD
-        elevation: forceElevated || isScrolledUnder ? elevation : 0.0,
-=======
         elevation: isScrolledUnder ? elevation : 0.0,
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
         scrolledUnderElevation: scrolledUnderElevation,
         shadowColor: shadowColor,
         surfaceTintColor: surfaceTintColor,
@@ -2180,10 +2162,6 @@ class _RenderAppBarTitleBox extends RenderAligningShiftedBox {
   }
 }
 
-<<<<<<< HEAD
-class _DefaultsM2 extends AppBarTheme {
-  _DefaultsM2(this.context)
-=======
 enum _ScrollUnderFlexibleVariant { medium, large }
 
 class _ScrollUnderFlexibleSpace extends StatefulWidget {
@@ -2309,7 +2287,6 @@ mixin _ScrollUnderFlexibleConfig {
 // Hand coded defaults based on Material Design 2.
 class _AppBarDefaultsM2 extends AppBarTheme {
   _AppBarDefaultsM2(this.context)
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     : super(
       elevation: 4.0,
       shadowColor: const Color(0xFF000000),
@@ -2337,17 +2314,6 @@ class _AppBarDefaultsM2 extends AppBarTheme {
   TextStyle? get titleTextStyle => _theme.textTheme.headline6;
 }
 
-<<<<<<< HEAD
-// BEGIN GENERATED TOKEN PROPERTIES
-
-// Generated code to the end of this file. Do not edit by hand.
-// These defaults are generated from the Material Design Token
-// database by the script dev/tools/gen_defaults/bin/gen_defaults.dart.
-
-// Generated version v0_92
-class _TokenDefaultsM3 extends AppBarTheme {
-  _TokenDefaultsM3(this.context)
-=======
 // BEGIN GENERATED TOKEN PROPERTIES - AppBar
 
 // Do not edit by hand. The code between the "BEGIN GENERATED" and
@@ -2359,7 +2325,6 @@ class _TokenDefaultsM3 extends AppBarTheme {
 
 class _AppBarDefaultsM3 extends AppBarTheme {
   _AppBarDefaultsM3(this.context)
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
     : super(
       elevation: 0.0,
       scrolledUnderElevation: 3.0,
@@ -2399,9 +2364,6 @@ class _AppBarDefaultsM3 extends AppBarTheme {
   @override
   TextStyle? get titleTextStyle => _textTheme.titleLarge;
 }
-<<<<<<< HEAD
-// END GENERATED TOKEN PROPERTIES
-=======
 
 // Variant configuration
 class _MediumScrollUnderFlexibleConfig with _ScrollUnderFlexibleConfig {
@@ -2463,4 +2425,3 @@ class _LargeScrollUnderFlexibleConfig with _ScrollUnderFlexibleConfig {
 }
 
 // END GENERATED TOKEN PROPERTIES - AppBar
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318

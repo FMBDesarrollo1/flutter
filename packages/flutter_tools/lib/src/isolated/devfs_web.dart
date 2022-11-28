@@ -1015,26 +1015,12 @@ void log(logging.LogRecord event) {
   if (event.level >= logging.Level.SEVERE) {
     globals.printError('${event.loggerName}: ${event.message}$error', stackTrace: event.stackTrace);
   } else if (event.level == logging.Level.WARNING) {
-<<<<<<< HEAD
-    // TODO(elliette): Remove the following message suppressions after DWDS is
-    // >13.1.0, https://github.com/flutter/flutter/issues/101639
-    const String dartUri = 'DartUri';
-    if (event.loggerName == dartUri) {
-      const String webSqlWarning = 'Unresolved uri: dart:web_sql';
-      const String uiWarning = 'Unresolved uri: dart:ui';
-      if (event.message == webSqlWarning || event.message == uiWarning) {
-        return;
-      }
-    }
-    globals.printWarning('${event.loggerName}: ${event.message}$error');
-=======
     // Note: Temporary fix for https://github.com/flutter/flutter/issues/109792
     // TODO(annagrin): Remove the condition after the bogus warning is
     // removed in dwds: https://github.com/dart-lang/webdev/issues/1722
     if (!event.message.contains('No module for')) {
       globals.printWarning('${event.loggerName}: ${event.message}$error');
     }
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318
   } else  {
     globals.printTrace('${event.loggerName}: ${event.message}$error');
   }

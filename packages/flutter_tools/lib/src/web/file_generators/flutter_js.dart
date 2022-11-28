@@ -76,10 +76,7 @@ _flutter.loader = null;
 
     _loadEntrypoint(entrypointUrl) {
       if (!this._scriptLoaded) {
-<<<<<<< HEAD:packages/flutter_tools/lib/src/web/flutter_js.dart
-=======
         console.debug("Injecting <script> tag.");
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318:packages/flutter_tools/lib/src/web/file_generators/flutter_js.dart
         this._scriptLoaded = new Promise((resolve, reject) => {
           let scriptTag = document.createElement("script");
           scriptTag.src = entrypointUrl;
@@ -100,11 +97,7 @@ _flutter.loader = null;
     _waitForServiceWorkerActivation(serviceWorker, entrypointUrl) {
       if (!serviceWorker || serviceWorker.state == "activated") {
         if (!serviceWorker) {
-<<<<<<< HEAD:packages/flutter_tools/lib/src/web/flutter_js.dart
-          console.warn("Cannot activate a null service worker. Falling back to plain <script> tag.");
-=======
           console.warn("Cannot activate a null service worker.");
->>>>>>> d9111f64021372856901a1fd5bfbc386cade3318:packages/flutter_tools/lib/src/web/file_generators/flutter_js.dart
         } else {
           console.debug("Service worker already active.");
         }
